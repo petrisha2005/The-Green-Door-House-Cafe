@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>The Green Door Coffee House | Cozy Greenhouse Cafe in Shanti Nagar</title>
+  <meta name="description" content="Discover The Green Door Coffee House, a hidden greenhouse gem on the second floor in Shanti Nagar, Bengaluru. Enjoy specialty espresso tonics, artisanal sourdough, and gourmet desserts in a cozy plant-filled escape.">
+  <meta name="keywords" content="The Green Door Coffee House, Shanti Nagar Cafe, Bengaluru Greenhouse Cafe, Specialty Coffee Bangalore, Second Floor Cafe Bengaluru, Avocado Toast Bangalore, Cafe Reservation Shanti Nagar">
+  <link rel="icon" type="image/png" href="assets/cafe_logo_sign.png">
+  
+  <!-- GSAP Motion & ScrollTrigger Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=1.1">
+</head>
+<body>
+  <!-- Sleek Champagne-Gold Scroll Progress Bar -->
+  <div id="scroll-progress" class="scroll-progress-bar"></div>
+
+  <!-- Main Navigation Header -->
+  <header id="header">
+    <div class="logo">
+      <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M497.9 142.1l-46.1-46.1c-18.7-18.7-49.1-18.7-67.9 0l-45.5 45.5-12.7-12.7c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l12.7 12.7-193 193c-18.7 18.7-18.7 49.1 0 67.9l46.1 46.1c18.7 18.7 49.1 18.7 67.9 0L498 176c18.7-18.8 18.7-49.1-.1-67.9zM203 400.4c-6.2 6.2-16.4 6.2-22.6 0l-22.6-22.6c-6.2-6.2-6.2-16.4 0-22.6l193-193c6.2-6.2 16.4-6.2 22.6 0l22.6 22.6c6.2 6.2 6.2 16.4 0 22.6L203 400.4z"/>
+      </svg>
+      <span class="logo-text">The Green Door</span>
+    </div>
+    
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="#hero" class="active" id="nav-hero">Home</a></li>
+        <li><a href="#about" id="nav-about">About Vibe</a></li>
+        <li><a href="#menu" id="nav-menu-link">Menu Highlight</a></li>
+        <li><a href="#reserve" id="nav-reserve">Book Table</a></li>
+        <li><a href="#dashboard" id="nav-dashboard">Reservations</a></li>
+        <li><a href="#location" id="nav-location">Find Us</a></li>
+      </ul>
+    </nav>
+    
+    <div class="cart-icon-wrapper" id="cart-trigger" aria-label="Open tasting cart budget estimator">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent); filter: drop-shadow(0 0 4px rgba(212,175,55,0.25));">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg>
+      <span class="cart-badge" id="cart-count">0</span>
+    </div>
+    
+    <div class="menu-toggle" id="mobile-menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- 1. Hero Surface Section -->
+  <section id="hero" class="hero">
+    <!-- Immersive Atmospheric Particles Container -->
+    <div id="particles-container" class="particles-container"></div>
+
+    <div class="hero-content">
+      <span class="section-tag">Second Floor Secret</span>
+      <h1 class="hero-title">THE GREEN DOOR HOUSE CAFE</h1>
+      <p class="hero-subtitle">Your Cozy Escape in the Heart of Shanti Nagar. Step away from the Bengaluru bustle and walk through the historic emerald green door. A botanical greenhouse sanctuary where warm espresso smells meet friendly quiet smiles.</p>
+      
+      <div class="hero-meta">
+        <div class="meta-item" title="Google Maps Ratings">
+          <span class="star">★</span>
+          <span>4.7 (328+ Reviews)</span>
+        </div>
+        <div style="width: 1px; background: var(--border-glass); align-self: stretch;"></div>
+        <div class="meta-item" title="Average Cost per person">
+          <span class="rupee">₹</span>
+          <span>₹200–400 per person</span>
+        </div>
+      </div>
+      
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary btn-icon">
+          <span>Explore Menu</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <a href="#reserve" class="btn btn-secondary">Reserve a Table</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. About / Vibe Section -->
+  <section id="about" class="about">
+    <div class="about-grid">
+      <!-- Refactored Arch Frame Visual Container -->
+      <div class="about-visual arch-frame reveal-element reveal-left">
+        <img src="assets/cafe_green_door.jpg" alt="Open emerald green double door entrance of The Green Door cafe" class="about-image">
+        <div class="about-badge">
+          <div class="about-badge-icon">🌿</div>
+          <div class="about-badge-text">
+            <h4>Secluded Sanctuary</h4>
+            <p>Second floor location keeps street traffic noise away</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="about-text reveal-element reveal-right">
+        <span class="section-tag" style="text-align: left;">The Aesthetic</span>
+        <h3>A Cozy Botanical Glasshouse High Above The Street</h3>
+        <p>Tucked away on the second floor of Church Road, The Green Door Coffee House is a lush urban garden that greets you with rich exposed bricks, velvet green sofas, and overhead glass skylights. Here, vintage wood tables are nestled between cascading English ivy, giant Swiss cheese plants, and cozy reading lamps.</p>
+        
+        <div class="about-features">
+          <div class="feature-item">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            </svg>
+            <div>
+              <h5>Warm Local Service</h5>
+              <p>Friendly staff who remember your name and favorite pour-over bean.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+            </svg>
+            <div>
+              <h5>Laptop Friendly Nooks</h5>
+              <p>Polite silence policies, soft instrumental jazz, and plenty of power outlets.</p>
+            </div>
+          </div>
+        </div>
+        
+        <a href="#reserve" class="btn btn-primary">Plan Your Visit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive AI Coffee Recommendation Quiz Section -->
+  <section id="coffee-quiz" class="quiz-section">
+    <div class="quiz-container glass-panel reveal-element">
+      <div class="quiz-header">
+        <span class="section-tag">Taste Matchmaker</span>
+        <h3 class="quiz-title">Interactive Coffee Recommendation</h3>
+        <p>Answer 4 quick sensory questions and let our virtual barista brew your ideal cup.</p>
+        <div class="quiz-progress-bar-container">
+          <div class="quiz-progress-bar" id="quiz-progress" style="width: 25%;"></div>
+        </div>
+        <span class="quiz-progress-text" id="quiz-progress-lbl">Step 1 of 4</span>
+      </div>
+      
+      <div class="quiz-wizard" id="quiz-wizard">
+        <!-- Step 1: Mood -->
+        <div class="quiz-step active" data-step="1">
+          <h4>How are you feeling right now?</h4>
+          <div class="quiz-options">
+            <button type="button" class="quiz-opt-btn" data-val="tired">🥱 Tired & Sleepy</button>
+            <button type="button" class="quiz-opt-btn" data-val="productive">💻 Productive & Focused</button>
+            <button type="button" class="quiz-opt-btn" data-val="cozy">🛋️ Cozy & Relaxed</button>
+            <button type="button" class="quiz-opt-btn" data-val="adventurous">🧗 Adventurous & Curious</button>
+          </div>
+        </div>
+        
+        <!-- Step 2: Sweetness -->
+        <div class="quiz-step" data-step="2">
+          <h4>How sweet do you like your drink?</h4>
+          <div class="quiz-options">
+            <button type="button" class="quiz-opt-btn" data-val="none">🙅 Not Sweet / Bold</button>
+            <button type="button" class="quiz-opt-btn" data-val="medium">🍯 Balanced & Medium</button>
+            <button type="button" class="quiz-opt-btn" data-val="extra">🍬 Rich & Extra Sweet</button>
+          </div>
+        </div>
+        
+        <!-- Step 3: Temperature -->
+        <div class="quiz-step" data-step="3">
+          <h4>What is your temperature choice?</h4>
+          <div class="quiz-options">
+            <button type="button" class="quiz-opt-btn" data-val="hot">☕ Hot & Cozying</button>
+            <button type="button" class="quiz-opt-btn" data-val="cold">❄️ Chilled & Refreshing</button>
+          </div>
+        </div>
+        
+        <!-- Step 4: Strength -->
+        <div class="quiz-step" data-step="4">
+          <h4>What level of strength do you prefer?</h4>
+          <div class="quiz-options">
+            <button type="button" class="quiz-opt-btn" data-val="mild">🍃 Mild & Smooth</button>
+            <button type="button" class="quiz-opt-btn" data-val="strong">⚡ Strong & Bold</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="quiz-nav">
+        <button type="button" class="btn btn-secondary" id="quiz-back-btn" disabled style="padding: 0.4rem 1.2rem; font-size: 0.85rem;">Back</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Menu Highlight & Live Budget Estimator Section -->
+  <section id="menu" class="menu-section">
+    <span class="section-tag">Crafted With Care</span>
+    <h2 class="section-title reveal-element">The Tasting Menu</h2>
+    
+    <!-- Menu Action Buttons -->
+    <div class="menu-action-row reveal-element">
+      <button class="btn btn-secondary btn-icon" id="open-lightbox-trigger">
+        <span>View Full Digital Menu Sheets</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+      </button>
+    </div>
+
+    <!-- Refactored Menu Filters -->
+    <div class="menu-filter-container reveal-element">
+      <button class="filter-btn active" data-filter="all">Full Menu</button>
+      <button class="filter-btn" data-filter="coffee">Beverages & Specials</button>
+      <button class="filter-btn" data-filter="eats">Mains & Pastas</button>
+      <button class="filter-btn" data-filter="desserts">Sweet Desserts</button>
+    </div>
+    
+    <!-- Menu Grid -->
+    <div class="menu-grid" id="menu-items-grid">
+      <!-- Items dynamically populated by app.js -->
+    </div>
+
+    <!-- Sourced Disclaimers -->
+    <p class="menu-disclaimer">
+      🌿 All our milk based beverages are prepared using <strong>Akshayakalpa Fresh Organic Milk</strong>. 
+      <br> Alternate Milk options (Oat/Almond) available: <strong>+₹80</strong>. *Hot & Iced options available (pricing varies).
+    </p>
+  </section>
+
+  <!-- Polaroid Style UGC Gallery Section -->
+  <section id="gallery" class="gallery-section">
+    <div class="gallery-intro">
+      <span class="section-tag">Cozy Memories</span>
+      <h2 class="section-title">The Green Door Chronicles</h2>
+      <p class="section-subtitle">Real moments captured by our guests. Share your story and pin your instant memories to our organic corkboard!</p>
+      <button type="button" class="btn btn-secondary btn-icon" id="open-upload-modal-btn">
+        <span>Pin Your Cozy Moment</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
+    </div>
+    
+    <div class="corkboard-wrapper reveal-element">
+      <div class="polaroid-grid" id="polaroid-grid">
+        <!-- Dynamic submissions and defaults seeded by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Interactive Table Seating & Selections -->
+  <section id="reserve" class="reservations">
+    <span class="section-tag">Select Your Vibe</span>
+    <h2 class="section-title">Reserve a Table</h2>
+    
+    <div class="reservation-grid">
+      <!-- Left Seating Selector Panel -->
+      <div class="seating-selector reveal-element reveal-left">
+        <div class="seating-map-container">
+          <h3 class="seating-map-title">Click to Select Seating Area</h3>
+          
+          <div class="seating-visual-map">
+            <!-- Window Side -->
+            <div class="seating-area-card selected" data-area="window">
+              <div class="area-icon">🪟</div>
+              <div class="area-name">Window Side</div>
+              <div class="area-status">Scenic & Quiet</div>
+            </div>
+            
+            <!-- Balcony -->
+            <div class="seating-area-card" data-area="balcony">
+              <div class="area-icon">🌿</div>
+              <div class="area-name">Botanical Balcony</div>
+              <div class="area-status">Airy & Lush</div>
+            </div>
+            
+            <!-- Cozy Nook -->
+            <div class="seating-area-card" data-area="nook">
+              <div class="area-icon">🛋️</div>
+              <div class="area-name">Cozy Nook</div>
+              <div class="area-status">Warm & Private</div>
+            </div>
+          </div>
+          
+          <!-- Area visual image preview -->
+          <div class="area-preview">
+            <img src="assets/hero_bg.png" alt="Window Side Area" class="area-preview-image" id="area-preview-img">
+            <div class="area-preview-caption" id="area-preview-desc">
+              Gazing down on quiet, leafy Church Road street. Beautiful warm sunlight filters in, perfect for readers and dreamers.
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Seating Reservation Form -->
+      <div class="reservation-form-panel glass-panel reveal-element reveal-right">
+        <h3>Secure Seating</h3>
+        <p>Bookings are free. We hold reservations for 15 minutes past scheduled time.</p>
+        
+        <form id="reservation-form">
+          <!-- Area Seating Selection Hidden Input -->
+          <input type="hidden" id="selected-area-input" name="selectedArea" value="window">
+          
+          <div class="form-group">
+            <label for="res-name">Your Full Name</label>
+            <input type="text" id="res-name" class="form-input" placeholder="e.g. Patricia V." required>
+          </div>
+          
+          <div class="form-group">
+            <label for="res-phone">Mobile Phone</label>
+            <input type="tel" id="res-phone" class="form-input" placeholder="e.g. +91 97403 93173" required>
+          </div>
+          
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="res-date">Select Date</label>
+              <input type="date" id="res-date" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="res-time">Preferred Time</label>
+              <select id="res-time" class="form-input" required>
+                <option value="" disabled selected>Select slot</option>
+                <option value="09:00 AM">09:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="01:00 PM">01:00 PM</option>
+                <option value="03:00 PM">03:00 PM</option>
+                <option value="05:00 PM">05:00 PM</option>
+                <option value="07:00 PM">07:00 PM</option>
+                <option value="08:00 PM">08:00 PM</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="res-guests">Number of Guests</label>
+            <select id="res-guests" class="form-input" required>
+              <option value="1 Guest">1 Guest</option>
+              <option value="2 Guests" selected>2 Guests</option>
+              <option value="3 Guests">3 Guests</option>
+              <option value="4 Guests">4 Guests</option>
+              <option value="5-6 Guests">5–6 Guests (Double Table)</option>
+              <option value="7+ Guests">7+ Guests (Event Booking)</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-form-submit">Confirm Reservation</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Active Reservations Dashboard Panel -->
+  <section id="dashboard" class="dashboard-section">
+    <span class="section-tag">Manage Bookings</span>
+    <h2 class="section-title">My Reservation Dashboard</h2>
+    
+    <div class="dashboard-container reveal-element">
+      <div class="reservations-table-wrapper" id="dashboard-wrapper">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Location & Contact Directions -->
+  <section id="location" class="location">
+    <span class="section-tag">Get in Touch</span>
+    <h2 class="section-title">Directions & Timings</h2>
+    
+    <div class="location-grid">
+      <div class="location-info reveal-element reveal-left">
+        <div class="info-card">
+          <div class="info-card-icon">📍</div>
+          <div class="info-card-text">
+            <h4>Address</h4>
+            <p>Second floor, 17/3, Church Rd,<br>Bheemanna Garden, Shanti Nagar,<br>Bengaluru, Karnataka 560027</p>
+          </div>
+        </div>
+        
+        <div class="info-card">
+          <div class="info-card-icon">📞</div>
+          <div class="info-card-text">
+            <h4>Contact Details</h4>
+            <p>Phone: <strong>097403 93173</strong><br>Email: hello@greendoorcoffee.com</p>
+          </div>
+        </div>
+        
+        <div class="info-card">
+          <div class="info-card-icon">🕰️</div>
+          <div class="info-card-text">
+            <h4>Operating Hours</h4>
+            <p>Mon - Sun: 09:00 AM - 09:00 PM<br><span style="color: var(--accent); font-weight: 500;">Kitchen order closes at 8:30 PM</span></p>
+          </div>
+        </div>
+        
+        <div style="margin-top: 1rem;">
+          <a href="https://maps.google.com/?q=Second+floor,+17/3,+Church+Rd,+Bheemanna+Garden,+Shanti+Nagar,+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-icon">
+            <span>Get Directions</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Map embed frame -->
+      <div class="map-embed-wrapper reveal-element reveal-right">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.163359676644!2d77.59357497576579!3d12.961389815074213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae167905183db7%3A0xe104cf5e28a55dbf!2sThe%20Green%20Door%20Coffee%20House!5e0!3m2!1sen!2sin!4v1716719000000!5m2!1sen!2sin" class="map-embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    
+    <!-- Footer Details -->
+    <footer>
+      <ul class="footer-nav">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reserve">Reservations</a></li>
+      </ul>
+      
+      <div class="footer-socials">
+        <a href="#" class="social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28-.073-1.689-.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+        </a>
+      </div>
+      
+      <p class="copyright">&copy; 2026 The Green Door Coffee House. All rights reserved. Made with love in Bengaluru.</p>
+    </footer>
+  </section>
+
+  <!-- Live Budget Estimator Sidebar Drawer -->
+  <div class="cart-drawer-backdrop" id="cart-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3>Your Tasting Cart</h3>
+      <button class="close-cart-btn" id="close-cart" aria-label="Close cart">&times;</button>
+    </div>
+    
+    <div class="cart-items-list" id="cart-items-container">
+      <!-- Generated dynamically by app.js -->
+    </div>
+    
+    <div class="cart-summary-section">
+      <div class="summary-row">
+        <span>Items Subtotal</span>
+        <span id="cart-subtotal">₹0.00</span>
+      </div>
+      <div class="summary-row">
+        <span>GST Tax (18% for Dine-in)</span>
+        <span id="cart-tax">₹0.00</span>
+      </div>
+      
+      <div style="margin-top: 1rem;">
+        <span style="font-size: 0.85rem; font-weight: 500; color: var(--text-muted);">Add Tip for Staff</span>
+        <div class="tip-selection-row">
+          <button class="tip-btn" data-tip="0">No Tip</button>
+          <button class="tip-btn active" data-tip="10">10%</button>
+          <button class="tip-btn" data-tip="15">15%</button>
+          <button class="tip-btn" data-tip="20">20%</button>
+        </div>
+      </div>
+      
+      <div class="summary-row total">
+        <span>Estimated Total</span>
+        <span id="cart-total">₹0.00</span>
+      </div>
+      
+      <button class="btn btn-primary checkout-btn" id="cart-checkout-btn">Proceed to Reserve Table</button>
+    </div>
+  </aside>
+
+  <!-- Lightbox Modal for View Full Menu Sheets -->
+  <div class="lightbox-backdrop" id="menu-lightbox-backdrop">
+    <div class="lightbox-container">
+      <button class="lightbox-close-btn" id="close-lightbox-btn" aria-label="Close menu gallery">&times;</button>
+      
+      <!-- Printed Double Menu sheets styled natively via HTML & CSS -->
+      <div class="printed-sheets-wrapper">
+        
+        <!-- Sheet Page 1: Beverages & Specials -->
+        <div class="printed-menu-sheet">
+          <div class="sheet-header">
+            <span class="sheet-logo-icon">🌿</span>
+            <h3 class="sheet-title">The Green Door</h3>
+            <span class="sheet-subtitle">Beverages & Specials</span>
+            <div class="sheet-divider"></div>
+          </div>
+          
+          <h4 class="sheet-section-title">Espresso & Warmers</h4>
+          <ul class="printed-menu-list">
+            <li class="printed-menu-item">
+              <div class="printed-item-header">
+                <span class="printed-item-name">Espresso (Solo / Doppio)</span>
+                <span class="printed-item-dots"></span>
+                <span class="printed-item-price">₹170 / 190</span>
+              </div>
+              <div class="printed-item-desc">Rich and bold, a classic handcrafted coffee shot.</div>
+            </li>
+            <li class="printed-menu-item">
+              <div class="printed-item-header">
+                <span class="printed-item-name">Americano</span>
+                <span class="printed-item-dots"></span>
+                <span class="printed-item-price">₹200</span>
+              </div>
+              <div class="printed-item-desc">Smooth espresso pull combined with hot water. *Iced option available.</div>
+            </li>
+            <li class="printed-menu-item">
+              <div class="printed-item-header">
+                <span class="printed-item-name">Cappuccino</span>
+                <span class="printed-item-dots"></span>
+                <span class="printed-item-price">₹230</span>
+              </div>
+              <div class="printed-item-desc">Perfect classic balance of espresso, steamed milk, and velvety foam layers.</div>
+            </li>
+            <li class="printed-menu-item">
+              <div class="printed-item-header">
+                <span class="printed-item-name">Latte</span>
+                <span class="printed-item-dots"></span>
+                <span class="printed-item-price">₹250</span>
+              </div>
+              <div class="printed-item-desc">Espresso with steamed milk and a delicate touch of microfoam. *Iced available.</div>
+            </li>
+            <li class="printed-menu-item">
+              <div class="printed-item-header">
+                <span class="printed-item-name">Honey Cinnamon Latte</span>
+                <span class="printed-item-dots"></span>
+                <span class="printed-item-price">₹290</span>
+              </div>
+              <div class="printed-item-desc">Warm, spiced, and sweet—authentic Christmas in a cup!</div>
+            </li>
+            <li class="printed-menu-item">
+              <div class="printed-item-header">
+                <span class="printed-item-name">Manual Brew</span>
+                <span class="printed-item-dots"></span>
+                <span class="printed-item-price">₹210 - 260</span>
+              </div>
+              <div class="printed-item-desc">Tailored handcrafted coffee prepared by our baristas according to your taste.</div>
+            </li>
+          </ul>
+
+          <h4 class="sheet-section-title">Cold Craft & Refreshers</h4>
+          <ul class="printed-menu-list">
+            <li class="printed-menu-item">
+              <div class="printed-item-header">
+                <span class="printed-item-name">Cold Brew / Classic Cold Coffee</span>
+                <span class="printed-item-dots"></span>
+                <span class="printed-item-price">₹250 / 240</span>
+              </div>
+              <div class="printed-item-desc">Slow-steeped organic coffee beans / Sweet creamy classic cold shake.</div>
+            </li>
+            <li class="printed-menu-item">
+              <div class="printed-item-header">
+                <span class="printed-item-name">The OJ / The Elder Specials</span>
+                <span class="printed-item-dots"></span>
+                <span class="printed-item-price">₹220 / 240</span>
+              </div>
+              <div class="printed-item-desc">Freshly squeezed orange juice / Elderflower tonic, topped with an espresso shot.</div>
+            </li>
+            <li class="printed-menu-item">
+              <div class="printed-item-header">
+                <span class="printed-item-name">Artisanal Kombucha / Herbal Tea</span>
+                <span class="printed-item-dots"></span>
+                <span class="printed-item-price">₹200 / 190</span>
+              </div>
+              <div class="printed-item-desc">Sparkling wellness tea (Yuzu, Cola, Hibiscus) / Calming rose cinnamon black.</div>
+            </li>
+          </ul>
+          
+          <div class="sheet-footer">
+            Akshayakalpa fresh organic milk used in all milk-based drinks.
+            <br>Alternate Milk (Oat/Almond): +₹80.
+          </div>
+        </div>
+
+        <!-- Sheet Page 2: Mains, Pastas & Desserts -->
+        <div class="printed-menu-sheet">
+          <div class="sheet-header">
+            <span class="sheet-logo-icon">🍽️</span>
+            <h3 class="sheet-title">The Green Door</h3>
+            <span class="sheet-subtitle">Mains & Treats</span>
+            <div class="sheet-divider"></div>
+          </div>
+          
+          <h4 class="sheet-section-title">Mains & Side Kicks</h4>
+          <ul class="printed-menu-list">
+            <li class="printed-menu-item">
+              <div class="printed-item-header">
+                <span class="printed-item-name">Caprese Toast</span>
+                <span class="printed-item-dots"></span>
+                <span class="printed-item-price">₹340</span>
+              </div>
+              <div class="printed-item-desc">In-house pesto sourdough, seasoned cherry tomatoes, buffalo mozzarella, and salad side.</div>
+            </li>
+            <li class="printed-menu-item">
+              <div class="printed-item-header">
+                <span class="printed-item-name">Roseate Avocado Toastie <span style="font-size:0.75rem; color:#74c69d;">🌱</span></span>
+                <span class="printed-item-dots"></span>
+                <span class="printed-item-price">₹380</span>
+              </div>
+              <div class="printed-item-desc">Haas avocados and beetroot hummus spread on toasted sourdough with fresh salad crisps.</div>
+            </li>
+            <li class="printed-menu-item">
+              <div class="printed-item-header">
+                <span class="printed-item-name">Forest / Farm Delight <span style="font-size:0.75rem; color:#d4af37;">🥬</span></span>
+                <span class="printed-item-dots"></span>
+                <span class="printed-item-price">₹340 / 320</span>
+              </div>
+              <div class="printed-item-desc">Sourdough topped with creamy wild mushrooms / Grilled veggies on pesto with melted mozzarella.</div>
+            </li>
+            <li class="printed-menu-item">
+              <div class="printed-item-header">
+                <span class="printed-item-name">TGD Special seasoned Chips <span style="font-size:0.75rem; color:#d4af37;">🥬</span></span>
+                <span class="printed-item-dots"></span>
+                <span class="printed-item-price">₹180</span>
+              </div>
+              <div class="printed-item-desc">Our signature baked chips topped with in-house spices, served with a creamy yoghurt dill dip.</div>
+            </li>
+          </ul>
+
+          <h4 class="sheet-section-title">Pasta Specials & Desserts</h4>
+          <ul class="printed-menu-list">
+            <li class="printed-menu-item">
+              <div class="printed-item-header">
+                <span class="printed-item-name">Savory Pesto / Creamy Mushroom <span style="font-size:0.75rem; color:#d4af37;">🥬</span></span>
+                <span class="printed-item-dots"></span>
+                <span class="printed-item-price">₹370 / 380</span>
+              </div>
+              <div class="printed-item-desc">Fresh basil pesto pasta / Rich button & shiitake mushroom sauce penne.</div>
+            </li>
+            <li class="printed-menu-item">
+              <div class="printed-item-header">
+                <span class="printed-item-name">Golden Whole Wheat Carrot Cake</span>
+                <span class="printed-item-dots"></span>
+                <span class="printed-item-price">₹250</span>
+              </div>
+              <div class="printed-item-desc">Whole wheat, organic brown sugar, and cinnamon cream cheese frosting—healthy indulgence!</div>
+            </li>
+            <li class="printed-menu-item">
+              <div class="printed-item-header">
+                <span class="printed-item-name">Decadent Brownie / With Gelato</span>
+                <span class="printed-item-dots"></span>
+                <span class="printed-item-price">₹150 / 200</span>
+              </div>
+              <div class="printed-item-desc">Warm fudgy chocolate brownie served with your choice of vanilla or hazelnut gelato scoop.</div>
+            </li>
+          </ul>
+          
+          <div class="sheet-footer">
+            🌱 Vegan | 🥬 Jain Friendly options indicated.
+            <br>Kitchen bookings lock free with table reservations.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Recommendation Engine Result Modal -->
+  <div class="lightbox-backdrop" id="quiz-modal-backdrop">
+    <div class="lightbox-container" style="max-width: 650px; padding: 1.5rem;">
+      <div class="glass-panel" style="position: relative; width: 100%; padding: 2.5rem; border-radius: 40px 10px 40px 10px; border: 1px solid var(--border-glass-active); background: rgba(11, 26, 17, 0.95); box-shadow: 0 20px 50px rgba(0,0,0,0.9);">
+        <button type="button" class="lightbox-close-btn" id="close-quiz-modal" aria-label="Close recommendation" style="top: 1.5rem; right: 1.5rem;">&times;</button>
+        
+        <!-- Loading state inside results card -->
+        <div class="quiz-loading-state" id="quiz-loading" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3rem 1rem; text-align: center;">
+          <div class="spinning-bean" style="font-size: 3rem; margin-bottom: 1.5rem; filter: drop-shadow(0 0 10px var(--accent));">☕</div>
+          <h4 style="font-family: var(--font-display); font-size: 1.5rem; color: var(--text-main); margin-bottom: 1rem;">Brewing your perfect match...</h4>
+          <div class="loading-bar-wrapper" style="width: 200px; height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden;">
+            <div class="loading-bar" id="loading-bar-progress" style="width: 0%; height: 100%; background: var(--accent); transition: width 0.1s linear;"></div>
+          </div>
+        </div>
+        
+        <!-- Content state inside results card -->
+        <div class="quiz-result-content" id="quiz-result-content" style="display: none;">
+          <span class="section-tag" style="margin-bottom: 0.5rem;">Your Coffee Soulmate</span>
+          <h3 class="result-headline" style="font-size: 2.2rem; line-height: 1.2; margin-bottom: 2rem; font-family: var(--font-display);">You seem like an <br><span id="rec-item-name" style="color: var(--accent); text-shadow: 0 0 15px rgba(212,175,55,0.2);">Drink Name</span> person.</h3>
+          
+          <div class="result-body" style="display: flex; gap: 2rem; align-items: center; margin-bottom: 2.5rem;">
+            <div class="result-visual arch-frame" style="width: 140px; height: 180px; flex-shrink: 0; border-radius: 100px 100px 10px 10px; overflow: hidden; border: 1px solid var(--border-glass);">
+              <img src="" alt="" id="rec-item-img" class="result-image" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="result-details" style="flex-grow: 1;">
+              <h4 id="rec-item-title" style="font-size: 1.4rem; color: var(--text-main); margin-bottom: 0.5rem; font-family: var(--font-sans); font-weight: 600;">Latte</h4>
+              <span class="result-price" id="rec-item-price" style="font-family: var(--font-sans); font-size: 1.3rem; color: var(--accent); font-weight: 700; display: block; margin-bottom: 0.75rem;">₹250</span>
+              <p class="result-description" id="rec-item-desc" style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; font-weight: 300;">Espresso with steamed milk...</p>
+              <div class="result-badge-container" id="rec-item-badges" style="display: flex; gap: 0.5rem; margin-top: 1rem;"></div>
+            </div>
+          </div>
+          
+          <div class="result-actions" style="display: flex; justify-content: flex-end;">
+            <button type="button" class="btn btn-primary btn-icon" id="rec-order-btn">
+              <span>Order This Drink</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Polaroid UGC Photo Upload Modal -->
+  <div class="lightbox-backdrop" id="upload-modal-backdrop">
+    <div class="lightbox-container" style="max-width: 520px; padding: 1.5rem;">
+      <div class="glass-panel" style="position: relative; width: 100%; padding: 2.5rem; border-radius: 30px 10px 30px 10px; border: 1px solid var(--border-glass-active); background: rgba(11, 26, 17, 0.98); box-shadow: 0 20px 50px rgba(0,0,0,0.9);">
+        <button type="button" class="lightbox-close-btn" id="close-upload-modal" aria-label="Close upload form" style="top: 1.5rem; right: 1.5rem;">&times;</button>
+        <h3 style="font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--accent);">Pin Your Cozy Memory</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem; font-weight: 300;">Upload your photograph, choose mood tags, and let us frame it on our organic Chronicles board!</p>
+        
+        <form id="polaroid-upload-form">
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label style="display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; color: var(--accent); margin-bottom: 0.5rem;">Select Your Photo</label>
+            <div class="file-dropzone" id="file-dropzone" style="width: 100%; height: 150px; border: 2px dashed var(--border-glass); border-radius: 15px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition-fast); overflow: hidden; background: rgba(255,255,255,0.01);">
+              <span class="dropzone-icon" style="font-size: 2.5rem; margin-bottom: 0.5rem; filter: grayscale(1); transition: var(--transition-fast);">📷</span>
+              <span class="dropzone-text" style="font-size: 0.8rem; color: var(--text-muted); font-weight: 400; text-align: center; padding: 0 1rem;">Click to upload or drag photo here</span>
+              <input type="file" id="photo-file" accept="image/*" required style="display: none;">
+              <img id="upload-preview-img" style="display: none; width: 100%; height: 100%; object-fit: cover;" alt="Preview">
+            </div>
+          </div>
+          
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label for="photo-experience" style="display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; color: var(--accent); margin-bottom: 0.5rem;">Share Your Experience (Handwritten Caption)</label>
+            <input type="text" id="photo-experience" class="form-input" placeholder="e.g. Rainy morning at the window nook..." required maxlength="42" style="width: 100%; background: rgba(255,255,255,0.02); border: 1px solid var(--border-glass); border-radius: 8px; padding: 0.75rem 1rem; color: var(--text-main); font-family: var(--font-sans); font-size: 0.9rem;">
+          </div>
+          
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label for="photo-sentiment" style="display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; color: var(--accent); margin-bottom: 0.5rem;">Aesthetic Notes / Thoughts</label>
+            <textarea id="photo-sentiment" class="form-input" rows="2" placeholder="Tell us about the atmosphere, the coffee, or what you were working on..." required style="width: 100%; background: rgba(255,255,255,0.02); border: 1px solid var(--border-glass); border-radius: 8px; padding: 0.75rem 1rem; color: var(--text-main); font-family: var(--font-sans); font-size: 0.9rem; resize: none;"></textarea>
+          </div>
+          
+          <div class="form-group" style="margin-bottom: 2rem;">
+            <label style="display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; color: var(--accent); margin-bottom: 0.5rem;">Select Mood Tags</label>
+            <div class="mood-tag-buttons" id="mood-tags-container" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <button type="button" class="mood-tag-btn" data-tag="Cozy 🛋️" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass); border-radius: 20px; padding: 0.4rem 0.9rem; font-size: 0.75rem; color: var(--text-muted); cursor: pointer; transition: var(--transition-fast);">Cozy 🛋️</button>
+              <button type="button" class="mood-tag-btn" data-tag="Productive 💻" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass); border-radius: 20px; padding: 0.4rem 0.9rem; font-size: 0.75rem; color: var(--text-muted); cursor: pointer; transition: var(--transition-fast);">Productive 💻</button>
+              <button type="button" class="mood-tag-btn" data-tag="Warm ☕" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass); border-radius: 20px; padding: 0.4rem 0.9rem; font-size: 0.75rem; color: var(--text-muted); cursor: pointer; transition: var(--transition-fast);">Warm ☕</button>
+              <button type="button" class="mood-tag-btn" data-tag="Serene 🍃" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass); border-radius: 20px; padding: 0.4rem 0.9rem; font-size: 0.75rem; color: var(--text-muted); cursor: pointer; transition: var(--transition-fast);">Serene 🍃</button>
+              <button type="button" class="mood-tag-btn" data-tag="Retro 📻" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass); border-radius: 20px; padding: 0.4rem 0.9rem; font-size: 0.75rem; color: var(--text-muted); cursor: pointer; transition: var(--transition-fast);">Retro 📻</button>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-form-submit" style="width: 100%;">Pin Memory to Wall</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Core Javascript Orchestrator -->
+  <script src="app.js?v=1.1"></script>
+</body>
+</html>
